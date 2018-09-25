@@ -5,6 +5,7 @@ public class Quiz {
     public static void main(String[] args) {
 
 
+
         Scanner quiz = new Scanner(System.in);
         int guessNumber = 120;
         System.out.println("Podaj liczbę:");
@@ -35,7 +36,6 @@ public class Quiz {
                     while (userChoice == guessNumber) {
                         System.out.println("Twoja liczba jest poprawna!!!!Brawo!!!");
                         userChoice = quiz.nextInt();
-                        quiz.nextLine();
                         quiz.close();
                     }
 
