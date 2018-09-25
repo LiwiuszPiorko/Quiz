@@ -13,31 +13,42 @@ public class Quiz {
 
         while (userChoice < guessNumber) {
             System.out.println("Liczba jest za mała.");
+            break;
+        }
+
             System.out.println("Podaj liczbę:");
             userChoice = quiz.nextInt();
             quiz.nextLine();
-        }
+
 
 
         while (userChoice > guessNumber) {
             System.out.println("Liczba jest za duża.");
+            break;
+        }
+
             System.out.println("Podaj liczbę:");
             userChoice = quiz.nextInt();
             quiz.nextLine();
-        }
+
 
         while (userChoice % 3 != 0) {
             System.out.println("Liczba nie jest podzielna przez 3.");
+            break;
+        }
+
             System.out.println("Podaj liczbę:");
             userChoice = quiz.nextInt();
             quiz.nextLine();
-        }
+
 
         while (userChoice == guessNumber) {
             System.out.println("Twoja liczba jest poprawna!!!!Brawo!!!");
+            break;
+        }
             userChoice = quiz.nextInt();
             quiz.nextLine();
-        }
+
     }
 }
 
