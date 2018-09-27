@@ -9,14 +9,13 @@ public class Quiz {
 
         System.out.println("Podaj liczbę:");
         int userChoice = quiz.nextInt();
-        int guessNumber = 25;
 
-        while (userChoice != guessNumber) {
+        while (userChoice>200||userChoice<100||userChoice%3!=0) {
 
-            if (userChoice < guessNumber) {
+            if (userChoice < 100) {
                 System.out.println("Liczba jest za mała");
             }
-            if (userChoice > guessNumber){
+            if (userChoice > 200){
                 System.out.println("Liczba jest za duża");
             }
             if (userChoice % 3 != 0){
@@ -24,11 +23,7 @@ public class Quiz {
             }
                 userChoice = quiz.nextInt();
         }
-        while (userChoice == guessNumber) {
-            System.out.println("Liczba jest ok");
-            break;
-        }
-        System.out.println("Jesteś półbogiem!");
+        System.out.println("Ogadłeś prawidłową liczbę! Jesteś półbogiem!");
         quiz.close();
 
     }
